@@ -2,7 +2,7 @@
 
 // import { PRODUCT_CATEGORIES } from "@/config";
 import { Menu, X } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
