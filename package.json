@@ -39,6 +39,7 @@
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
     "sonner": "^1.5.0",
+    "stripe": "^16.9.0",
     "swiper": "^11.1.11",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
