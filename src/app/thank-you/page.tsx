@@ -39,7 +39,7 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
   if (!order) return notFound();
 
   const orderUserId =
-    typeof order.user === "string" ? order.user : order.user.id;
+    typeof order.user === "string" ? order.user : (order.user as User).id;
 
   if (orderUserId !== user?.id) {
     return redirect(`/sign-in?origin=thank-you?orderId=${orderId}`);
@@ -74,7 +74,7 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
               below. We&apos;ve sent your receipt and orders to{" "}
               {typeof order.user !== "string" ? (
                 <span className="font-medium text-gray-900">
-                  {order.user.email}
+                  {(order.user as User).email}
                 </span>
               ) : null}
             </p>
@@ -156,9 +156,9 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
             </div>
 
             <PaymentStatus
-              isPaid={order._isPaid}
+              isPaid={order._isPaid as boolean}
               orderEmail={(order.user as User).email}
-              orderId={order.id}
+              orderId={order.id as any}
             />
 
             <div className="mt-16 border-t border-gray-200 py-6 text-right">
