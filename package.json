@@ -13,6 +13,8 @@
     "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png}\" dist/",
     "lint": "next lint"
   },
+  "resolutions": {
+    "cliui": "^7.0.2"},
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@payloadcms/bundler-webpack": "^1.0.7",
