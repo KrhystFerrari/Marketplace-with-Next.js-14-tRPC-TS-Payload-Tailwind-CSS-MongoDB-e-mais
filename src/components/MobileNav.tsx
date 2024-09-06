@@ -1,8 +1,8 @@
 "use client";
 
-// import { PRODUCT_CATEGORIES } from "@/config";
+import { PRODUCT_CATEGORIES } from "@/config";
 import { Menu, X } from "lucide-react";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -32,7 +32,7 @@ const MobileNav = () => {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="lg:hidden relative -m-2 inline-flex ml-2 items-center justify-center rounded-md p-2 text-gray-400"
+        className="lg:hidden relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
       >
         <Menu className="h-6 w-6" aria-hidden="true" />
       </button>
@@ -58,7 +58,7 @@ const MobileNav = () => {
             </div>
 
             <div className="mt-2">
-              {/* <ul>
+              <ul>
                 {PRODUCT_CATEGORIES.map((category) => (
                   <li
                     key={category.label}
@@ -94,7 +94,7 @@ const MobileNav = () => {
                     </div>
                   </li>
                 ))}
-              </ul> */}
+              </ul>
             </div>
 
             <div className="space-y-6 border-t border-gray-200 px-4 py-6">
